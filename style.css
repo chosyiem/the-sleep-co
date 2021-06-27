@@ -16,6 +16,9 @@
 }
 
 /* Universal styles and utility classes */
+logo {
+  font-size: 5rem;
+}
 
 body {
   font-family: 'Catamaran', sans-serif;
@@ -67,6 +70,10 @@ color: #192b37;}
   color: rgb(120,120,125);
   line-height: 1;
 }
+.header-banner {
+  background-color: #FFBE00;
+  padding: 2rem;
+}
 
  h2{
   font-size: 2.5rem;
@@ -105,10 +112,26 @@ header h3 {
   font-size: 5.5rem;
   line-height: 1;
 }
+nav {
+  background-color: #FFBE00;
+  padding: 2rem;
+}
+nav a {
+  border: none;
+  padding: 2rem;
+  text-align: center;
+  display: inline-block;
+
+}
+nav a:hover {
+  color: white;
+}
 
 footer a {
   border: none;
 }
+
+
 
 /* -------Background Images----- */
 
@@ -134,3 +157,33 @@ footer a {
       font-size: 3rem;
 
   }
+ 
+    
+  
+  
+
+  
+  .gallery div[class*="col-4"]{
+   
+    background-image: url("https://source.unsplash.com/HD7QBx2Yfa4");
+    background-size: cover;
+    background-position: bottom;
+    min-height: 30vh;
+    padding: 5%;
+    border: 2px solid white;
+  }
+  
+  .gallery div[class*="col-6"]{
+    
+    background-image: url("https://source.unsplash.com/Uh-Qv2P9-sg");
+    background-size: cover;
+    background-position: center;
+    min-height: 30vh;
+    padding: 5%;
+    border: 2px solid white;
+  }
+
+  .gallery div[class*="_xs-12"]{
+    min-height:50vh;
+  }
+   

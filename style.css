@@ -150,7 +150,11 @@ footer a {
   border: none;
 }
 
-
+/* ---Buttons and Forms */
+input, textarea {
+  width:100%;
+  display: block;
+}
 
 /* -------Background Images----- */
 

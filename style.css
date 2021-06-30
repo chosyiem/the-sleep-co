@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+img { max-width: 100%; }
+
+/* Optional padding to override default gridlex columns */ 
+[class*=col] { padding: 0; }
+
 
 /*------------ Universal styles and utility classes-------- */
 
@@ -65,40 +70,40 @@ body {
 }
 
 
-logo {
-  font-size: 5rem;
+.logo h2{
+  margin-bottom: 0;
+  padding: 2%;
   }
+
 h2, h3, h4, h5, h6 {
    margin-bottom: 1rem;
    line-height: 1.1;
  }
 
- h2{
+h2{
   font-size: 2.5rem;
-  line-height: 1.1;
-  margin-bottom: 1rem;
  }
 
- h3 { line-height: 1;}
 
- p{
+p{
   font-weight: 200;
   line-height: 1.5;
   margin-bottom: 1rem;
-}
+  }
+
 p:last-child {
   margin-bottom: 0;
-}
+  }
 
 a {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid; 
-}
+  }
 
 a:hover {
   color:#FFBE00;
-}
+  }
 
 .text-left   {text-align: left;}
 .text-center {text-align: center;}
@@ -140,61 +145,71 @@ header h3 {
   line-height: 1;
   }
 
-
-
 nav a {
   border: none;
-  /* padding: 2rem; */
+  padding: 0.5rem;
   text-align: center;
   display: inline-block;
-
-}
+  }
+ 
 nav a:hover {
-  color: white;
-}
+  color: #FFBE00;
+  }
 
 footer a {
   border: none;
-}
+  }
 
 /* ---Buttons and Forms */
-input, textarea {
-  width:100%;
-  display: block;
-}
 
+input, textarea {
+    width:100%;
+    display: block;
+    margin-bottom: 0.3rem;
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    border: 2px solid transparent;
+  }
+
+form button {padding: 0.5rem 2rem;
+    background-color: #FFBE00;
+    appearance: none;
+    border: 2px solid #FFBE00;
+    color: inherit;
+  }
+
+input:focus, 
+textarea:focus {
+  border: 2px solid #FFBE00;
+  outline: none;
+}
 /* -------Background Images----- */
 
 .bg-bed {background-image: url("/images/sleep-co-lamp.jpg");}
 .bg-pug {
   background-image: url("/images/sleep-co-pug.jpg");
-  background-position: 50% 35%;}
+  background-position: 50% 35%;
+  }
+
 .bg-yellow{
   background-image: url("/images/sleep-co-yellow.jpg");
   background-position: 50% 57%;
-}
-.bg-white {
-  background-image: url("/images/sleep-co-white.jpg");
-}
+  }
+.bg-white {background-image: url("/images/sleep-co-white.jpg");}
 
   /* ------Icon grid-----------  */
-
-
-  .fas{
+  
+.fas{
       display: block;
       text-align: center;
       margin-bottom: 2rem;
       font-size: 3rem;
-
   }
  
-    
-  
-  
+  /* Buttons and forms -------------------------- */
 
-  
-  .gallery div[class*="col-4"]{
-   
+.gallery div[class*="col-4"]{
     background-image: url("https://source.unsplash.com/HD7QBx2Yfa4");
     background-size: cover;
     background-position: bottom;
@@ -203,8 +218,7 @@ input, textarea {
     border: 2px solid white;
   }
   
-  .gallery div[class*="col-6"]{
-    
+.gallery div[class*="col-6"]{
     background-image: url("https://source.unsplash.com/Uh-Qv2P9-sg");
     background-size: cover;
     background-position: center;
@@ -213,12 +227,13 @@ input, textarea {
     border: 2px solid white;
   }
 
-  .gallery div[class*="_xs-12"]{
+.gallery div[class*="_xs-12"]{
     min-height:50vh;
   }
 
   /* Testimonial block ------------- */
-  .quote-icon {
+
+.quote-icon {
     font-size: 6rem;
     display: inline-block;
     color: rgb(120,120,125);

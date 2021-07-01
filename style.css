@@ -212,3 +212,37 @@ textarea:focus {
     color: rgb(120,120,125);
     line-height: 1;
     }
+
+    /* ----Media Queries  */
+
+/* General CSS Styles (apply everywhere) */ 
+
+.show-xs, 
+.show-sm,
+.show-md {
+	display: none;
+  }
+
+  /* - MD Media Query (64em / 1024px)  */ 
+  /* Styles added here will apply on devices smaller than 576px, or zoomed in equivalent */ 
+
+@media (max-width: 64em) {
+	.show-md { display: block; }
+	.hide-md { display: none; }
+  }
+
+  /* -- SM Media Query (48em / 768px) --- */ 
+  /* Styles added here will apply on devices smaller than 768px, or zoomed in equivalent */ 
+
+@media (max-width: 48em) {
+	 .show-sm { display: block; }
+	 .hide-sm { display: none; }
+  }
+
+  /* ---- XS Media Query (36em / 576px) ---- */ 
+  /* Styles added here will apply on devices smaller than 576px, or zoomed in equivalent */ 
+
+@media (max-width: 36em) {
+		.show-xs { display: block; }
+		.hide-xs { display: none; }
+  }

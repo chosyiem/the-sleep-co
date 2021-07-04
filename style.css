@@ -183,7 +183,7 @@ textarea:focus {
  }
  /* -------Background Images----- */
 
-.bg-bed {background-image: url("/images/sleep-co-lamp.jpg");}
+.bg-bed {background-image: url('/images/the-sleep-co-white.jpg');}
 .bg-pug {
   background-image: url("/images/sleep-co-pug.jpg");
   background-position: 50% 35%;
@@ -246,3 +246,4 @@ textarea:focus {
 		.show-xs { display: block; }
 		.hide-xs { display: none; }
   }
+ 

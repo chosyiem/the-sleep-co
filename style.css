@@ -228,8 +228,8 @@ textarea:focus {
   /* Styles added here will apply on devices smaller than 576px, or zoomed in equivalent */ 
 
 @media (max-width: 64em) {
-  body {border: 2px solid green;
-  padding: 0.5rem; }
+  /* body {border: 2px solid green;
+  padding: 0.5rem; } */
 	.show-md { display: block; }
 	.hide-md { display: none; }
   .md-tall-80 { min-height: 80vh;}
@@ -243,7 +243,8 @@ textarea:focus {
   html { font-size: 14px;}
   p { font-size: 1.1rem; }
 
-  body {border: 2px solid blue;}
+  /* body {border: 2px solid blue;} */
+  
 	 .show-sm { display: block; }
 	 .hide-sm { display: none; }
 
@@ -273,7 +274,7 @@ textarea:focus {
 
 @media (max-width: 36em) {
 
-  body { border: 2px solid lightblue;}
+  /* body { border: 2px solid lightblue;} */
 		.show-xs { display: block; }
 		.hide-xs { display: none; }
     h1 {
@@ -287,7 +288,7 @@ textarea:focus {
     h3 {
       font-size: 2rem;
     }
-    
+
     [class*="grid"] .xs-stack {
       flex-basis: 100%;
       max-width: 100%;

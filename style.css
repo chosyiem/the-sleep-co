@@ -244,7 +244,7 @@ textarea:focus {
   p { font-size: 1.1rem; }
 
   /* body {border: 2px solid blue;} */
-  
+
 	 .show-sm { display: block; }
 	 .hide-sm { display: none; }
 
@@ -267,6 +267,11 @@ textarea:focus {
    .sm-margin-r-0   { margin-right: 0; }
    .logo h2 { font-size: 2rem;}
    header h3 { font-size: 11vw;}
+
+   [class*="grid"]  .m-stack {
+    flex-basis: 100%;
+    max-width: 100%;
+   }
   }
 
   /* ---- XS Media Query (36em / 576px) ---- */ 

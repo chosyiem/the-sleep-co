@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <!-- This is the head of our html where we add external resources and metadata -->
+   <!-- This is the head of our html where we add external resources and metadata -->
     <head>
-         <!-- Viewport meta for responsiveness -->
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         
-        <title>  Contact The Sleep Co</title>
+        <!-- Viewport meta for responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> The Sleep Co </title>
 
         <!-- Fontawesome icons ----------  -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
+
         <!-- ---Gridlex for flexbox grids -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css" />
 
         <!-- Google font Catamaran 200, 400, 500, 800---------- -->
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;500;800&display=swap" rel="stylesheet" />
-        <!-- Flodesk newsletter sign up form----------- -->
-        <script>
-            (function(w, d, t, s, n) {
-              w.FlodeskObject = n;
-              var fn = function() {
-                (w[n].q = w[n].q || []).push(arguments);
-              };
-              w[n] = w[n] || fn;
-              var f = d.getElementsByTagName(t)[0];
-              var e = d.createElement(t);
-              var h = '?v=' + new Date().getTime();
-              e.async = true;
-              e.src = s + h;
-              f.parentNode.insertBefore(e, f);
-            })(window, document, 'script', 'https://assets.flodesk.com/universal.js', 'fd');
-          </script>
+        
+       <!-- Flodesk newsletter sign up form----------- -->
+       <script>
+        (function(w, d, t, s, n) {
+          w.FlodeskObject = n;
+          var fn = function() {
+            (w[n].q = w[n].q || []).push(arguments);
+          };
+          w[n] = w[n] || fn;
+          var f = d.getElementsByTagName(t)[0];
+          var e = d.createElement(t);
+          var h = '?v=' + new Date().getTime();
+          e.async = true;
+          e.src = s + h;
+          f.parentNode.insertBefore(e, f);
+        })(window, document, 'script', 'https://assets.flodesk.com/universal.js', 'fd');
+      </script>
 
         <!-- This is our CSS stylesheet, this always goes last --------->
         <link rel="stylesheet" href="/style.css" />
 
     </head>    
-    
+        <!------------------ Body begins  ---------------->
     <body>
-        <!------------------ This is the header banner  ---------------->
+                    <!------------------ This is the header banner  ---------------->
         <header class="grid text-center tall-100 md-tall-80">
             <div class="header-nav col-12-top grid">
-                <div class="col-5_xs-12-middle sm-padded-b-0">
-                    <a href="/index.html" class="logo">
-                        <h2> The Sleep Co </h2>
-                    </a>
-                </div>
-            
-                <nav class="col-7_xs-12-middle text-right sm-text-center">
-                    <a href="/index.html">Home</a>
-                    <a href="/about.html">About</a>
-                    <a href="/products.html">Products</a>
-                    <a href="/contact.html">Contact</a>
-                </nav>
-            </div>
+    <div class="col-5_xs-12-middle sm-padded-b-0">
+        <a href="/index.html" class="logo">
+            <h2> The Sleep Co </h2>
+        </a>
+    </div>
+
+    <nav class="col-7_xs-12-middle text-right sm-text-center">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/products.html">Products</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+</div>
             <div class="col-12"> 
                 <h3 class="font-weight-bold editable">
                     why <span class="featured-text"> wait </span> 
@@ -120,11 +120,10 @@
             </div>
         </section>
 
-
         <!---------------Footer----------------------------------->
         <footer class="padded grid-spaceBetween bg-dark">
             <div class="col-4-bottom">
-                <h2>Let's<br /> <span class="featured-text">connect</span> </h2>
+                <h2>Let's <br/> <span class="featured-text">connect</span> </h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia modi magni cum est molestias eligendi, illo repellendus numquam mollitia velit eum culpa. Dolor vel id neque facere eum quis ab!</p>
             </div>
             <div class="col-5-bottom">
@@ -134,7 +133,13 @@
                 <p><strong>Instagram</strong> <a href="https://www.instagram.com/thesleepco>">@thesleepco</a> </p>
             </div>
 
-          
+            <div class="col-8"id="fd-form-60f0102ae0b04144efeb6ab6"></div>
+            <script>
+              window.fd('form', {
+                formId: '60f0102ae0b04144efeb6ab6',
+                containerEl: '#fd-form-60f0102ae0b04144efeb6ab6'
+              });
+            </script>
 
         </footer>
         <script type="text/javascript"> 
@@ -155,5 +160,4 @@
             })();
         </script>
     </body>
-
 </html>

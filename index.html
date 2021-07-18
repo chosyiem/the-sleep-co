@@ -1,13 +1,22 @@
 ---
 layout: default
+features:
+ - icon: fas fa-cloud
+   description: dolor sit amet consectetur adipisicing elit. Cupiditate nobis architecto blanditiis asperiores quasi. Ad explicabo cum odio labore repellat quisquam, laborum blanditiis incidunt inventore quasi, officia obcaecati rem dicta?
+ - icon: fa-solid fa-hands-bubbles
+   description: dolor sit amet consectetur adipisicing elit. Cupiditate nobis architecto blanditiis asperiores quasi. Ad explicabo cum odio labore repellat quisquam, laborum blanditiis incidunt inventore quasi, officia obcaecati rem dicta?
+ - icon: fas fa-recycle
+   description: dolor sit amet consectetur adipisicing elit. Cupiditate nobis architecto blanditiis asperiores quasi. Ad explicabo cum odio labore repellat quisquam, laborum blanditiis incidunt inventore quasi, officia obcaecati rem dicta?
+ - icon: fas fa-atom
+   description: dolor sit amet consectetur adipisicing elit. Cupiditate nobis architecto blanditiis asperiores quasi. Ad explicabo cum odio labore repellat quisquam, laborum blanditiis incidunt inventore quasi, officia obcaecati rem dicta?
 ---
     
         <!------------------- Header banner---------------------->
-        <header class="grid text-center tall-100 md-tall-80">
+        <header class="grid tall-100 md-tall-80">
 
              {% include header-nav.html %}
-             
-            <div class="col-12"> 
+
+            <div class="col-12 text-center"> 
                 <h3 class="font-weight-bold editable">
                     <span class="featured-text">sleep</span> like a baby
                 </h3>
@@ -46,26 +55,17 @@ layout: default
 
         </section>
         <!--------------------- Feature icon grid ------------------------------------->
-        <section class="padded grid bg-dark"> 
+        <section class="padded grid-center bg-dark"> 
             <div class="padded-sm col-12 text-center">
-                <h2> Features you will love</h2>
+                <h2> <span class="featured-text">Features</span> you will love</h2>
             </div>
+            {% for item in page.features %}
             <div class=" padded-sm col-3_sm-6 xs-stack editable">
-                <p><i class="fas fa-cloud"></i></p>
-                <p><strong>Hi IOC Team</strong> dolor sit amet consectetur adipisicing elit. Cupiditate nobis architecto blanditiis asperiores quasi. Ad explicabo cum odio labore repellat quisquam, laborum blanditiis incidunt inventore quasi, officia obcaecati rem dicta?</p>
+                <i class="{{item.icon}}"></i>
+                <p> {{item.description}} </p>
             </div>
-            <div class="padded-sm col-3_sm-6 xs-stack editable">
-                <p><i class="fas fa-cloud"></i></p>
-                <p><strong>Hope everyone</strong> dolor sit, amet consectetur adipisicing elit. Eius, delectus incidunt praesentium esse, quaerat laborum perferendis, architecto nulla ipsam est ratione non deserunt corporis nostrum. Officiis mollitia perferendis quasi voluptas!</p>
-            </div>
-            <div class="padded-sm col-3_sm-6 xs-stack editable">
-                <p><i class="fas fa-cloud"></i></p>
-                <p><strong>is having a</strong>&nbsp; &nbsp;&nbsp; dolor sit amet consectetur adipisicing elit. Quo, nobis dignissimos! Nam enim praesentium hic labore! Illo deserunt cupiditate explicabo odit repellendus reiciendis delectus expedita architecto, debitis quae nemo recusandae?</p>
-            </div>
-            <div class="padded-sm col-3_sm-6 xs-stack editable">
-                <p><i class="fas fa-cloud"></i></p>
-                <p><strong>good week! &nbsp; &nbsp; </strong>dolor sit amet consectetur adipisicing elit. Rem ab adipisci modi maiores animi quod minus, non vero nemo blanditiis consectetur quis explicabo sint necessitatibus ipsa beatae illum libero inventore?</p>
-            </div>
+            {% endfor %}
+            
         </section>
 
         <!------------ Image Banner ----------------------->

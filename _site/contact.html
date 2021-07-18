@@ -33,6 +33,9 @@
         })(window, document, 'script', 'https://assets.flodesk.com/universal.js', 'fd');
       </script>
 
+       <!-- Animate on scroll --------- -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
         <!-- This is our CSS stylesheet, this always goes last --------->
         <link rel="stylesheet" href="/style.css" />
 
@@ -42,19 +45,31 @@
                     <!------------------ This is the header banner  ---------------->
         <header class="grid text-center tall-100 md-tall-80">
             <div class="header-nav col-12-top grid">
-    <div class="col-5_xs-12-middle sm-padded-b-0">
+    <div class="col-5_sm-11-middle sm-padded-b-0">
         <a href="/index.html" class="logo">
             <h2> The Sleep Co </h2>
         </a>
     </div>
 
-    <nav class="col-7_xs-12-middle text-right sm-text-center">
+    <nav class="col-7_sm-12-middle text-right sm-text-center hide-sm">
         <a href="/index.html">Home</a>
         <a href="/about.html">About</a>
         <a href="/products.html">Products</a>
         <a href="/contact.html">Contact</a>
     </nav>
+
+    <div class="col-1 show-sm">
+        <div class="hamburger-button">
+        <i class="fas fa-bars"></i>
+        </div>
+    </div>
 </div>
+<nav class="mobile-menu bg-featured padded">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/products.html">Products</a>
+    <a href="/contact.html">Contact</a>
+</nav>
             <div class="col-12"> 
                 <h3 class="font-weight-bold editable">
                     why <span class="featured-text"> wait </span> 
@@ -121,27 +136,32 @@
         </section>
 
         <!---------------Footer----------------------------------->
-        <footer class="padded grid-spaceBetween bg-dark">
-            <div class="col-4-bottom">
+    <footer class="padded grid-spaceBetween bg-dark">
+        <div class="col-4-bottom">
                 <h2>Let's <br/> <span class="featured-text">connect</span> </h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia modi magni cum est molestias eligendi, illo repellendus numquam mollitia velit eum culpa. Dolor vel id neque facere eum quis ab!</p>
-            </div>
-            <div class="col-5-bottom">
+        </div>
+        <div class="col-5-bottom">
                 <p><strong>Call:</strong> <a href="tel:#"> 04555 5555</a> </p>
                 <p><strong>Email:</strong> <a href="mailto:#">hello@thesleep.co</a> </p>
                 <p><strong>Store:</strong>55 Main St. Chicago</p>
                 <p><strong>Instagram</strong> <a href="https://www.instagram.com/thesleepco>">@thesleepco</a> </p>
-            </div>
+        </div>
 
-            <div class="col-8"id="fd-form-60f0102ae0b04144efeb6ab6"></div>
-            <script>
+        <div class="col-8"id="fd-form-60f0102ae0b04144efeb6ab6"></div>
+        <script>
               window.fd('form', {
                 formId: '60f0102ae0b04144efeb6ab6',
                 containerEl: '#fd-form-60f0102ae0b04144efeb6ab6'
               });
-            </script>
+        </script>
 
-        </footer>
+    </footer>
+
+    <!-- Add JQuery -------------------- -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      </script>
+
         <script type="text/javascript"> 
             (function () {
                 var options = {
@@ -159,5 +179,14 @@
                 var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
             })();
         </script>
+
+        <!-- Animate on scroll --------- -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+       <!-- ------ Our Custom Javascript file ---------->
+
+       <script src="/scripts.js"></script>
+
+
     </body>
 </html>

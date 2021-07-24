@@ -1,3 +1,49 @@
 ---
 layout: default
+gallery:
+ - column-size: col-6  
+   background-image: /images/sleep-co-lamp.jpg
+ - column-size: col-6  
+   background-image: /images/sleep-co-pug.jpg
+ - column-size: col-12  
+   background-image: /images/sleep-co-white.jpg
+ - column-size: col-4  
+   background-image: /images/sleep-co-pug.jpg
+ - column-size: col-4  
+   background-image: /images/sleep-co-lamp.jpg
+ - column-size: col-4 
+   background-image: /images/sleep-co-yellow.jpg
+
 ---
+ <!------------------- Header banner---------------------->
+ <header class="grid tall-100 md-tall-80">
+
+    {% include header-nav.html %}
+
+   <div class="col-12 text-center"> 
+       <h3 class="font-weight-bold editable" data-aos="fade-in" data-aos-duration="1000">               
+           <span class="featured-text">explore</span> our products
+       </h3>
+       <h1 class="font-weight-light editable" data-aos="fade-up" data-aos-delay="500">
+           the ultimate mattress solution
+       </h1>
+   </div>
+
+</header>
+ <!-- Gallery  -->
+
+ <section>
+
+
+    <div class="grid-center filterable-gallery" id="filterable-gallery">
+
+        {% for item in page.gallery %}
+        <div class="{{item.column-size}}">
+            <div class="bg-image" 
+                 style="background-image: url('{{item.background-image}}');">
+            </div>
+        </div>
+        {% endfor %}
+       
+    </div>  
+</section>

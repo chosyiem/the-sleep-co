@@ -1,24 +1,32 @@
 ---
 layout: default
+popup-gallery: true
+gallery-background: Dark Background 
 gallery:
   - column-size: col-4_sm-12
     aspect-ratio: square
     background_image: /images/sleep-co-lamp.jpg
+    type: dog
   - column-size: col-4_sm-12
     aspect-ratio: square
     background_image: /images/sleep-co-pug.jpg
+    type: dog
   - column-size: col-4_sm-12
     aspect-ratio: square
     background_image: /images/sleep-co-yellow.jpg
+    type: dog
   - column-size: col-12
     aspect-ratio: landscape
     background_image: /images/sleep-co-white.jpg
+    type: cat
   - column-size: col-6_sm-12
     aspect-ratio: portrait
     background_image: /images/sleep-co-lamp.jpg
+    type: rabbit
   - column-size: col-6_sm-12
     aspect-ratio: portrait
     background_image: /images/sleep-co-yellow.jpg
+    type: rabbit
 ---
 
 <!------------------- Header banner---------------------->
@@ -36,39 +44,25 @@ gallery:
    </div>
 </header>
 
- <!-- Gallery  -->
-
- <section class="padded">
+ <!-- Popup Gallery  -->
+ {% if page.popup-gallery == true %}
+ <section class="padded
+ {% if page.gallery-background == 'Dark Background' %} bg-dark {% endif %}">
     <h2>Popup Gallery</h2> 
 
   <div class="gallery grid" id="lightgallery">
     {% for item in page.gallery %}
+    {% if item.type != "dog"  or item.type == "cat" %}
 
     <a href class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
       <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');">
       </div>
     </a>
-
+    {%  endif %}
     {% endfor %}
 </div>
-
-<div class="gallery grid" id="lightgallery-2">
-
-
-  <a href class="button" href="/images/sleep-co-lamp.jpg" title="Photo 1">
-   View our Work
-  </a>
-  <a href class="button" href="/images/sleep-co-white.jpg" title="Photo 2"></a>
-  <a href class="button" href="/images/sleep-co-pug.jpg" title="Photo 3"></a>
-  <a href class="button" href="/images/sleep-co-yellow.jpg" title="Photo 4"></a>
-  <a href class="button" href="/images/sleep-co-white.jpg" title="Photo 5"></a>
-  <a href class="button" href="/images/sleep-co-pug.jpg" title="Photo 6"></a>
-  
-
-  
-</div>
-
 </section>
+  {%  else   %}
 
 <!-- Standard Gallery  -->
 <section class="padded">
@@ -84,3 +78,19 @@ gallery:
         {% endfor %}
     </div>
 </section>
+ {% endif %}
+<!-- <div class="gallery grid" id="lightgallery-2">
+
+
+  <a href class="button" href="/images/sleep-co-lamp.jpg" title="Photo 1">
+   View our Work
+  </a>
+  <a href class="button" href="/images/sleep-co-white.jpg" title="Photo 2"></a>
+  <a href class="button" href="/images/sleep-co-pug.jpg" title="Photo 3"></a>
+  <a href class="button" href="/images/sleep-co-yellow.jpg" title="Photo 4"></a>
+  <a href class="button" href="/images/sleep-co-white.jpg" title="Photo 5"></a>
+  <a href class="button" href="/images/sleep-co-pug.jpg" title="Photo 6"></a>
+  
+
+  
+</div> -->

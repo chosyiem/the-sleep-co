@@ -215,6 +215,7 @@ textarea:focus {
   border: 2px solid #FFBE00;
   outline: none;
  }
+
  /* -------Background Images----- */
 
 .bg-bed {background-image: url("/images/sleep-co-lamp.jpg");}
@@ -237,6 +238,25 @@ textarea:focus {
       margin-bottom: 2rem;
       font-size: 3rem;
   }
+
+  /* Image Gallery */
+
+  .gallery [class*="col-"] {
+    padding: 0.5%;
+  }
+  .gallery .gallery-item {
+    border-bottom: none;
+
+  }
+  /* Background of gallery when active */
+
+  .lg-backdrop {
+    background-color:rgb(60,60,60);
+    
+    }
+    .lg-backdrop.in {
+      opacity:0.9;
+    }
  
   /* Testimonial block ------------- */
  
@@ -375,33 +395,5 @@ margin: 0;
  
 }
 
-/* Filterable Gallery */
-/* Filterable Gallery Styles   */
 
-.filterable-gallery .bg-image {
-  padding-bottom: 100%;
-}
 
-.filterable-gallery {
-  padding: 1rem;
-}
-
-.filterable-gallery [class*=col] {
-  padding: 0.2rem;
-}
-
-.hidden { display: none; }
-
-/* Filter navigation */
-.portfolio-filter span {
-  text-transform: uppercase; 
-  padding: 0.2rem;
-}
-
-.portfolio-filter span:hover {
-  cursor: pointer;
-}
-
-.portfolio-filter .active {
-  color: #2D6340;
-}

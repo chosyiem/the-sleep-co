@@ -38,7 +38,24 @@ gallery:
 
  <!-- Gallery  -->
 
- <section>
+ <section class="padded">
+    <h2>Popup Gallery</h2> 
+
+  <div class="gallery grid" id="lightgallery">
+    {% for item in page.gallery %}
+
+    <a href class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
+      <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');">
+      </div>
+    </a>
+
+    {% endfor %}
+</div>
+</section>
+
+<!-- Standard Gallery  -->
+<section class="padded">
+    <h2> Standard Gallery </h2>
     <div class="gallery grid">
         {% for item in page.gallery %}
     

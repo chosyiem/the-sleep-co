@@ -2,104 +2,15 @@
 <html>
    <!-- This is the head of our html where we add external resources and metadata -->
     <head>
-        <!-- Viewport meta for responsiveness -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> The Sleep Co </title>
-
-        <!-- Fontawesome icons ----------  -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <!-- ---Gridlex for flexbox grids -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css" />
-
-        <!-- Google font Catamaran 200, 400, 500, 800---------- -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;500;800&display=swap" rel="stylesheet" />
-        
-       <!-- Flodesk newsletter sign up form----------- -->
-       <script>
-        (function(w, d, t, s, n) {
-          w.FlodeskObject = n;
-          var fn = function() {
-            (w[n].q = w[n].q || []).push(arguments);
-          };
-          w[n] = w[n] || fn;
-          var f = d.getElementsByTagName(t)[0];
-          var e = d.createElement(t);
-          var h = '?v=' + new Date().getTime();
-          e.async = true;
-          e.src = s + h;
-          f.parentNode.insertBefore(e, f);
-        })(window, document, 'script', 'https://assets.flodesk.com/universal.js', 'fd');
-      </script>
-
-       <!-- Animate on scroll --------- -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/> 
-
-        <!-- Lightgallery for pop-ups  -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/css/lightgallery-bundle.min.css" integrity="sha512-7xAjdVc23n18sYEAZKa79271IRUS1XzylIyJ8feyXvjrbbr4oId92993EiGTAP63Ob6KplRnmbNmBOg6bpLjYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-        <!-- This is our CSS stylesheet, this always goes last --------->
-        <link rel="stylesheet" href="/style.css" />
-
+       {% include head.html %}
     </head>    
         <!------------------ Body begins  ---------------->
     <body>
             {{ content }}
         <!---------------Footer----------------------------------->
-    <footer class="padded grid-spaceBetween bg-dark">
-        <div class="col-4-bottom">
-                <h2>Let's <br/> <span class="featured-text">connect</span> </h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia modi magni cum est molestias eligendi, illo repellendus numquam mollitia velit eum culpa. Dolor vel id neque facere eum quis ab!</p>
-        </div>
-        <div class="col-5-bottom">
-                <p><strong>Call:</strong> <a href="tel:#"> 04555 5555</a> </p>
-                <p><strong>Email:</strong> <a href="mailto:#">hello@thesleep.co</a> </p>
-                <p><strong>Store:</strong>55 Main St. Chicago</p>
-                <p><strong>Instagram</strong> <a href="https://www.instagram.com/thesleepco>">@thesleepco</a> </p>
-        </div>
+        {% include site-footer.html %}
 
-        <div class="col-8"id="fd-form-60f0102ae0b04144efeb6ab6"></div>
-        <script>
-              window.fd('form', {
-                formId: '60f0102ae0b04144efeb6ab6',
-                containerEl: '#fd-form-60f0102ae0b04144efeb6ab6'
-              });
-        </script>
-
-    </footer>
-
-    <!-- Add JQuery -------------------- -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-      </script>
-
-        <script type="text/javascript"> 
-            (function () {
-                var options = {
-                    whatsapp: "+1 555-555-5555", // WhatsApp number
-                    email: "hithere@mycompany.com", // Email
-                    call_to_action: "Chat with us", // Call to action
-                    button_color: "#0041ff", // Color of button
-                    position: "right", // Position may be 'right' or 'left'
-                    order: "whatsapp,email", // Order of buttons
-                    pre_filled_message: "Hey I'm messaging from your website ", // WhatsApp pre-filled message
-                };
-                var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-                s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-                var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-            })();
-        </script>
-
-        <!-- Animate on scroll --------- -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/lightgallery.min.js"></script>
-        
-       <!-- ------ Our Custom Javascript file ---------->
-
-       <script src="/scripts.js"></script>
-
+     {% include body-scripts.html %}
 
     </body>
 </html>
